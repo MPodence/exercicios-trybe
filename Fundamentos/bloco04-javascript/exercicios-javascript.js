@@ -62,7 +62,7 @@ const piramideB = 100;
 const piramideC = 60;
 let angulo = null;
 
-if (piramideA < 0|| piramideB < 0 || piramideC < 0) {
+if (piramideA < 0 || piramideB < 0 || piramideC < 0) {
     console.log('valor invalido');
 } else if (piramideA + piramideB + piramideC == 180) {
     angulo = true;
@@ -81,6 +81,32 @@ if (peçaMovimeneto == 'bispo') {
     console.log(peçaMovimeneto)
 } else {
     //resto das peças aqui com else if, salvando um teco de tempo rs
-    console.log('nao é uma peça de xadrez')
+    console.log('nao é uma peça de xadrez');
 }
 
+//exercicio 7
+let nota = 100;
+
+if (nota > 100 || nota < 0) {
+    console.log('Valor invalido');
+} else if (nota >= 90) {
+    nota = 'A';
+    console.log(nota);
+} else if (nota >= 80) {
+    nota = 'B';
+    console.log(nota);
+} else if (nota >= 70) {
+    nota = 'C';
+    console.log(nota);
+} else if (nota >= 60) {
+    nota = 'D';
+    console.log(nota);
+} else if (nota >= 50) {
+    nota = 'E';
+    console.log(nota);
+} else if (nota < 50) {
+    nota = 'F';
+    console.log(nota);
+} else {
+    console.log('o valor nao é uma nota');
+}
