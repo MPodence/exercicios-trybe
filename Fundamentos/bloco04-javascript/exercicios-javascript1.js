@@ -27,7 +27,7 @@ if (compareA > compareB) {
 } else if (compareA == compareB) {
     console.log('os números são iguais');
 } else {
-    console.log (compareB, 'é o maior número');
+    console.log(compareB, 'é o maior número');
 }
 
 //exercicio 3
@@ -110,3 +110,66 @@ if (nota > 100 || nota < 0) {
 } else {
     console.log('o valor nao é uma nota');
 }
+
+//exercicio 8
+const verifiquePar1 = 222;
+const verifiquePar2 = 23;
+const verifiquePar3 = 3;
+
+if (verifiquePar1 % 2 == 0 || verifiquePar2 % 2 == 0 || verifiquePar3 % 2 == 0) {
+    console.log(true)
+} else {
+    console.log(false)
+}
+
+//exercicio 9
+const custo = 10;
+const valorDeVenda = 20;
+const imposto = 1.20;
+let lucro = null;
+
+if (custo < 0 || valorDeVenda < 0) {
+    console.log('Valor invalido');
+}
+
+let custoTotal = custo * imposto;
+let custoDeMil = custoTotal * 1000;
+let vendasDeMil = valorDeVenda * 1000;
+lucro = vendasDeMil - custoDeMil;
+console.log(lucro);
+
+
+//exercicio 10
+let salarioBruto = 5200;
+let salarioLiquido = null;
+
+//calculo inss
+if (salarioBruto >= 0) {
+    if (salarioBruto <= 1556.94) {
+        salarioBruto = salarioBruto * 0.92; //8% inss
+    } else if (salarioBruto >= 1556.95 && salarioBruto <= 2594.92) {
+        salarioBruto = salarioBruto * 0.91; //9% inss
+    } else if (salarioBruto >= 2594.93 && salarioBruto <= 5189.82) {
+        salarioBruto = salarioBruto * 0.89; //11% inss
+    } else if (salarioBruto > 5189.82) {
+        salarioBruto = salarioBruto - 570.88; //aliquita maxima
+    }
+} else {
+    console.log('valor invalido');
+}
+//calculo imposto de renda
+if (salarioBruto >= 1903.99 && salarioBruto <= 2826.65) {
+    let ir = (salarioBruto * 0.075) - 142.80; //7.5% imposto de renda + valor a deduzir do imposto
+    salarioLiquido = salarioBruto - ir;
+} else if (salarioBruto >= 2826.66 && salarioBruto <= 3751.05) {
+    let ir = (salarioBruto * 0.15) - 354.80; //15% imposto de renda + valor a deduzir do imposto
+    salarioLiquido = salarioBruto - ir;
+} else if (salarioBruto >= 3751.06 && salarioBruto <= 4664.68) {
+    let ir = (salarioBruto * 0.225) - 636.13; //22,5% imposto de renda + valor a deduzir do imposto
+    salarioLiquido = salarioBruto - ir;
+} else if (salarioBruto > 4.664,68) {
+    let ir = (salarioBruto * 0.275) - 869.36; //27,5% imposto de renda + valor a deduzir do imposto
+    salarioLiquido = salarioBruto - ir;
+}
+console.log(salarioLiquido);
+
