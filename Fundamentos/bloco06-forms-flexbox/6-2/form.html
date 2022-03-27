@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!--Header-->
+    <header>
+        <h1>Formulário Test</h1>
+    </header>
+    <main>
+        <!--Formulario-->
+        <form id="myForm" action="" method="get">
+            <section class="form-content">
+                <!--Input Nome-->
+                <label for="full-name">Nome: </label>
+                <input type="text" name="full-name" id="full-name" placeholder="Digite seu nome" required minlength="10" maxlength="40">
+                <br>
+                <!--Input Email-->
+                <label for="email">Email: </label>
+                <input required type="text" name="email" id="email" placeholder="Digite seu email" minlength="10" maxlength="50">
+                <br>
+            </section>
+            <section class="form-content">
+                <!--Input Opções-->
+                <input type="radio" name="city-choices" id="city1">
+                <label for="city1" class="city-choices">City1</label>
+                <input type="radio" name="city-choices" id="city2">
+                <label for="city2" class="city-choices">City2</label>
+                <input type="radio" name="city-choices" id="city3">
+                <label for="city3" class="city-choices">City3</label>
+                <input type="radio" name="city-choices" id="city4">
+                <label for="city4" class="city-choices">City4</label>
+                <br>
+            </section>
+            <section class="form-content">
+                <!--Espaço para texto-->
+                <label for="resposta">Espaço para texto: </label>
+                <br>
+                <textarea name="resposta" id="resposta" cols="30" rows="10" maxlength="500"></textarea>
+            </section>
+            <section class="form-content">
+                <!--Input Data/Mes/Ano-->
+                <label for="data">Data: </label>
+                <input type="text" name="data" placeholder="dd/mm/aaaa">
+            </section>
+            <section class="form-content" id="section-termos">
+                <!--Termos-->
+                <label for="termos1">Concordo 1</label>
+                <input type="checkbox" name="termos" id="termos1">
+                <br>
+                <label for="termos2">Concordo 2</label>
+                <input type="checkbox" name="termos" id="termos2">
+            </section>
+            <section id="buttons">
+                <!--Buttons-->
+                <button type="submit" class="button" id="enviar">Enviar</button>
+                <button class="button" id="apagar">Apagar</button>
+            </section>
+        </form>
+    </main>
+<script src="./script.js"></script>
+</body>
+
+</html>
