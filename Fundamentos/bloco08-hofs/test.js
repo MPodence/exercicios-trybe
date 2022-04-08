@@ -20,6 +20,9 @@ console.log(newEmployees(addEmployee));
 
 //ex2
 const verificaSorteio = (resultado, valorApostado) => {
+    if (valorApostado > 5 || valorApostado < 1) {
+        return `1 a 5 por favore`
+    }
     if (resultado == valorApostado) {
         return `Apostado: ${valorApostado} Resultado: ${resultado} Ou seja, rabudo.`;
     } else {
@@ -32,4 +35,4 @@ const sorteio = (verificacao, aposta) => {
     return verificacao(resultadoSorteio, aposta);
 }
 
-console.log(sorteio(verificaSorteio, 4));
+console.log(sorteio(verificaSorteio, 1));
